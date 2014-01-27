@@ -31,22 +31,22 @@ namespace Kassakvitto {
         protected global::System.Web.UI.WebControls.TextBox SumTextBox;
         
         /// <summary>
-        /// kr control.
+        /// krPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label kr;
+        protected global::System.Web.UI.WebControls.Panel krPanel;
         
         /// <summary>
-        /// error control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label error;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// ReceiptButton control.
