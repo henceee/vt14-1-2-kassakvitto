@@ -13,5 +13,13 @@ namespace Kassakvitto
         {
 
         }
+
+        protected void ReceiptButton_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid) {
+            
+            
+            }
+        }
     }
 }

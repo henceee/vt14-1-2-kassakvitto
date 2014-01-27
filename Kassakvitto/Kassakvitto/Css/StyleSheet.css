@@ -1,7 +1,7 @@
 ﻿#ReceiptButton {
 
-float:left;
-margin-top:3%;
+float: left;
+margin-top: 10%;
 
 }
 
@@ -12,8 +12,3 @@ margin-top:3%;
     margin-top: 5%;
 }
 
-#krPanel {
-
-    float: left;
-    margin-top: -10%;
-}

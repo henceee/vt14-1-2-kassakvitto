@@ -2,18 +2,7 @@
 
 var formjs = {
     
-    focus: function () {
-
-        //alert("hej");
-
-        var sumtextbox = document.getElementById("SumTextBox");
-
-        sumtextbox.focus();
-        sumtextbox.select();
-
-        formjs.enterfunction();
-
-    },
+  
 
     enterfunction: function () {
 
@@ -35,4 +24,4 @@ var formjs = {
 
 }
 
-window.onload = formjs.focus;
+window.onload = formjs.enterfunction;
