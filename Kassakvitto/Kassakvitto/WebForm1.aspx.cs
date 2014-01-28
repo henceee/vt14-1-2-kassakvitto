@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace Kassakvitto
 {
     public partial class WebForm1 : System.Web.UI.Page
@@ -16,9 +17,11 @@ namespace Kassakvitto
 
         protected void ReceiptButton_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid) {
-            
-            
+            if (IsValid) {
+
+                Model.Reciept rec = new Model.Reciept();
+
+                
             }
         }
     }
