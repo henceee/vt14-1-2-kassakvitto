@@ -63,7 +63,7 @@ namespace Kassakvitto.Model
 
             MoneyOff = DiscountRate * subtotal;
 
-            double Paymentdue = Subtotal - MoneyOff;
+           
         }
     }
 }

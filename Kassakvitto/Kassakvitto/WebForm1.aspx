@@ -10,16 +10,60 @@
 <body>
     <form id="form1" runat="server" defaultfocus="SumTextBox">
     <div id="Calculate">
+
+        <div id="headerdiv">
         <h1>Kassakvitto</h1>
+        </div>
         <p>Total Köpsumma</p>
         <asp:TextBox ID="SumTextBox" runat="server"></asp:TextBox>
+       
         <asp:Label ID="krlabel" runat="server" Text="kr" ></asp:Label>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="SumTextBox" ErrorMessage="Ange en total köpsumma" Display="Dynamic"></asp:RequiredFieldValidator>
         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="SumTextBox" ErrorMessage="Ange en total köpsumma större än noll" Display="Dynamic" Operator="GreaterThan" Type="Integer" ValueToCompare="0"></asp:CompareValidator>
         <asp:Button ID="ReceiptButton" runat="server" Text="Beräkna" Onclick="ReceiptButton_Click" />
-        <asp:Label ID="Label1" runat="server" Text="Label" Visible="false"></asp:Label>
-        
-    </div>
+  
+        <asp:Panel ID="RecieptPanel" runat="server" Visible="false">
+       
+            <h1>Ellen Nu</h1>
+            <p>Telefon 070812345</p>
+            <asp:PlaceHolder ID="SubPlaceholder" runat="server">
+            <p>Öppettider 8-17</p>
+            <p>--------------------------</p>
+            <p>
+                <asp:Literal ID="SubLiteral" runat="server">Totalt: {0:c}</asp:Literal>
+            </p>
+
+            </asp:PlaceHolder>
+
+             <asp:PlaceHolder ID="DiscountPlaceHolder" runat="server">
+            <p>
+                <asp:Literal ID="DiscountLiteral" runat="server">Rabbatsats: {0:p00}</asp:Literal>
+            </p>
+            
+            </asp:PlaceHolder>
+
+            <asp:PlaceHolder ID="MoneyoffPlaceHolder" runat="server">
+            <p>
+                <asp:Literal ID="MoneyOffLiteral" runat="server">Rabatt: {0:c}</asp:Literal>
+            </p>
+            
+            </asp:PlaceHolder>
+
+            <asp:PlaceHolder ID="MoneyDuePlaceHolder" runat="server">
+            <p>
+                <asp:Literal ID="MoneyDueLiteral" runat="server">Att betala: {0:c}</asp:Literal>
+            </p>
+            
+            </asp:PlaceHolder>
+
+            <p>--------------------------</p>
+
+            <p>ORD NR 12345678910</p>
+            <p>VÄLKOMMEN ÅTER</p>
+            <br />
+            </asp:Panel>
+            
+        </div>     
     </form>
     <script src="Javascript/JavaScript.js"></script>
 </body>

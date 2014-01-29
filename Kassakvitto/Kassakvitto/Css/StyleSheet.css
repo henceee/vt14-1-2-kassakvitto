@@ -12,7 +12,43 @@ margin-top: 10%;
     margin-top: 5%;
 }
 
-#SumTextBox {
+#Calculate h1 {
 
-    margin-left: -10%;
+    margin-left: 0px !important;
+
 }
+
+/*#SumTextBox {
+
+   float: left;
+   /*margin-left: -10%;
+}*/
+
+#krlabel {
+
+    /*float: right;*/
+    /*margin-left: 0.1%;*/
+
+}
+
+#RecieptPanel {
+
+margin-top: 30%;
+border: 1px solid black;
+-webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+
+
+}
+
+#RecieptPanel p {
+
+    margin-left: 20%;
+}
+
+#RecieptPanel h1 {
+
+    margin-left: 20% !important;
+}
+
