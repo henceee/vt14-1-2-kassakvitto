@@ -19,9 +19,18 @@ namespace Kassakvitto
         {
             if (IsValid) {
 
-                Model.Reciept rec = new Model.Reciept();
+                try
+                {
+                    Model.Reciept rec = new Model.Reciept();
 
-                
+                    rec.Calculate(int.Parse(SumTextBox.Text));
+
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
             }
         }
     }

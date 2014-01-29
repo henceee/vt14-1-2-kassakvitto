@@ -12,10 +12,13 @@
     <div id="Calculate">
         <h1>Kassakvitto</h1>
         <p>Total Köpsumma</p>
-        <asp:TextBox ID="SumTextBox" runat="server"></asp:TextBox><asp:Label ID="Label1" runat="server" Text="kr" ></asp:Label>
+        <asp:TextBox ID="SumTextBox" runat="server"></asp:TextBox>
+        <asp:Label ID="krlabel" runat="server" Text="kr" ></asp:Label>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="SumTextBox" ErrorMessage="Ange en total köpsumma" Display="Dynamic"></asp:RequiredFieldValidator>
         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="SumTextBox" ErrorMessage="Ange en total köpsumma större än noll" Display="Dynamic" Operator="GreaterThan" Type="Integer" ValueToCompare="0"></asp:CompareValidator>
-        <asp:Button ID="ReceiptButton" runat="server" Text="Beräkna" Onclick="ReceiptButton_Click"/>
+        <asp:Button ID="ReceiptButton" runat="server" Text="Beräkna" Onclick="ReceiptButton_Click" />
+        <asp:Label ID="Label1" runat="server" Text="Label" Visible="false"></asp:Label>
+        
     </div>
     </form>
     <script src="Javascript/JavaScript.js"></script>
