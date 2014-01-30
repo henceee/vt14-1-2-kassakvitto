@@ -33,12 +33,7 @@ namespace Kassakvitto
 
                     MoneyOffLiteral.Text = String.Format(MoneyOffLiteral.Text, rec.MoneyOff);
 
-                    MoneyDueLiteral.Text = String.Format(MoneyDueLiteral.Text, rec.Subtotal - rec.MoneyOff);
-
-                         //double Paymentdue = Subtotal - MoneyOff;
-
-                    //Subplaceholder.Visible = true;
-                    //Recieptlabel.Text = string.Format("Ellen nu \n Telefon: 0708-12345 \n");
+                    MoneyDueLiteral.Text = String.Format(MoneyDueLiteral.Text, rec.Total);
 
                 }
                 catch (Exception)

@@ -9,23 +9,28 @@ namespace Kassakvitto.Model
     {
         private double _subtotal;
 
-        public Reciept() {
-        //tom
+        public Reciept()
+        {
+            //tom
         }
 
-        public Reciept(double subtotal) {
-        
-            Subtotal = subtotal;
-        
+        public Reciept(double subtotal)
+        {
+
+            Calculate(subtotal);
+
         }
 
-        public double Subtotal {
+        public double Subtotal
+        {
 
             get { return _subtotal; }
-            
-            set {
 
-                if(value <= 0){
+            private set
+            {
+
+                if (value <= 0)
+                {
 
                     throw new ArgumentOutOfRangeException();
 
@@ -35,35 +40,38 @@ namespace Kassakvitto.Model
             }
         }
 
-        public double DiscountRate{get;  set; }
-        public double MoneyOff { get; set; }
+        public double DiscountRate { get; private set; }
+        public double MoneyOff { get; private set; }
+        public double Total { get; private set; }
 
-        public void Calculate(double subtotal) {
-
+        public void Calculate(double subtotal)
+        {
             Subtotal = subtotal;
 
-            double discount = 0;
-            
-            if(subtotal > 499 && subtotal <=999){
+            if (Subtotal < 500)
+            {
 
-                discount = 0.05;
+                DiscountRate = 0;
 
             }
-            if (subtotal > 999 && subtotal <= 4999) {
+            else if (Subtotal < 1000)
+            {
 
-                discount = 0.1;
+                DiscountRate = 0.05;
             }
 
-            if (subtotal >= 5000) {
+            else if (Subtotal < 5000)
+            {
 
-                discount = 0.15;
+                DiscountRate = 0.1;
+            }
+            else
+            {
+                DiscountRate = 0.15;
             }
 
-            DiscountRate = discount;
-
-            MoneyOff = DiscountRate * subtotal;
-
-           
+            MoneyOff = DiscountRate * Subtotal;
+            Total = Subtotal - MoneyOff;
         }
     }
 }

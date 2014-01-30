@@ -14,12 +14,17 @@
         <div id="headerdiv">
         <h1>Kassakvitto</h1>
         </div>
-        <p>Total Köpsumma</p>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" DisplayMode="BulletList" HeaderText="Vänligen åtgärda följande fel:" />
+        <br />
+
+        <asp:Label ID="Label1" AssociatedControlID="SumTextBox" runat="server" Text="Total Köpsumma"></asp:Label>
+        <br />     
         <asp:TextBox ID="SumTextBox" runat="server"></asp:TextBox>
-       
-        <asp:Label ID="krlabel" runat="server" Text="kr" ></asp:Label>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="SumTextBox" ErrorMessage="Ange en total köpsumma" Display="Dynamic"></asp:RequiredFieldValidator>
-        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="SumTextBox" ErrorMessage="Ange en total köpsumma större än noll" Display="Dynamic" Operator="GreaterThan" Type="Integer" ValueToCompare="0"></asp:CompareValidator>
+        
+        <asp:Label ID="krlabel" AssociatedControlID="SumTextBox" runat="server" Text="kr" ></asp:Label>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="SumTextBox" Text="*" ErrorMessage="Ange en total köpsumma" Display="Dynamic"></asp:RequiredFieldValidator>
+        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="SumTextBox" Text="*" ErrorMessage="Ange en total köpsumma större än noll" Display="Dynamic" Operator="GreaterThan" Type="Integer" ValueToCompare="0"></asp:CompareValidator>
+        <br />
         <asp:Button ID="ReceiptButton" runat="server" Text="Beräkna" Onclick="ReceiptButton_Click" />
   
         <asp:Panel ID="RecieptPanel" runat="server" Visible="false">
